@@ -1,0 +1,27 @@
+cabal-version:      2.4
+name:               wattle
+version:            0.1.0.0
+synopsis:           A small parser-combinator library with a JSON parser and printer
+license:            MIT
+license-file:       LICENSE
+author:             Provokke
+build-type:         Simple
+
+common shared
+  default-language: Haskell2010
+  ghc-options:      -Wall
+  build-depends:    base >=4 && <5
+
+library
+  import:           shared
+  hs-source-dirs:   src
+  exposed-modules:  Wattle.Parser
+                    Wattle.JSON
+  build-depends:    containers
+
+test-suite spec
+  import:           shared
+  type:             exitcode-stdio-1.0
+  hs-source-dirs:   test
+  main-is:          Spec.hs
+  build-depends:    wattle, containers
