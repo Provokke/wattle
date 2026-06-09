@@ -120,3 +120,4 @@ main = do
   mapM_ (putStrLn . ("FAIL: " ++)) failures
   putStrLn (show (length checks - length failures) ++ " of " ++ show (length checks) ++ " checks passed")
   unless (null failures) exitFailure
+
