@@ -108,3 +108,4 @@ line 1, column 4: expected ']', found '2'
 ## Licence
 
 MIT.
+
