@@ -183,3 +183,4 @@ chainl1 :: Parser a -> Parser (a -> a -> a) -> Parser a
 chainl1 p op = p >>= rest
   where
     rest acc = (do f <- op; x <- p; rest (f acc x)) <|> pure acc
+
